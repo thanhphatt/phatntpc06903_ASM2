@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ADMIN</title>
+        <!-- BOOTSTRAP STYLES-->
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />
+        <!-- FONTAWESOME STYLES-->
+        <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+        <link href="assets/css/custom.css" rel="stylesheet" />
+        <!-- GOOGLE FONTS-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans'
+            rel='stylesheet' type='text/css' />
+    </head>
+    <body>
+
+        <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        
+        /* Modal Content */
+        .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+        }
+        
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        </style>
+
+        <div id="wrapper">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="adjust-nav">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle"
+                            data-toggle="collapse"
+                            data-target=".sidebar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><i
+                                ></i>&nbsp;FATXIT</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="../client/index.html">TRANG WEB CHÍNH</a></li>
+                            <li><a href="#">MỞ THẺ</a></li>
+                            <li><a href="#">KIỂM TRA</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /. NAV TOP  -->
+            <nav class="navbar-default navbar-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="main-menu">
+                        <li class="text-center user-image-back">
+                            <img src="assets/img/find_user.png"
+                                class="img-responsive" />
+
+                        </li>
+
+                        <li>
+                            <a href="index.html"><i
+                                    class="fa fa-desktop "></i>TRANG CHÍNH</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-edit "></i> sản
+                                phẩm<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="./sanphamdm.html">danh sách sản
+                                        phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="./themsanpham.html">thêm sản
+                                        phẩm</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-edit "></i>danh mục<span
+                                    class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="./danhmucds.html">danh sách danh
+                                        mục</a>
+                                </li>
+                                <li>
+                                    <a href="danhmuc.html">thêm danh mục</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="dathang.html"><i class="fa fa-table "></i>đặt hàng
+                                </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-edit "></i>Forms </a>
+                        </li>
+
+                       
+                    </ul>
+
+                </div>
+
+            </nav>
+            <!-- /. NAV SIDE  -->
+            <div id="page-wrapper">
+                <div id="page-inner">
+                    <div class="row">
+                   
+                        <div class="main-panel mt-4">
+                            <div class="container mt-5">
+                                <div class="alert alert-dark text-dark" role="alert">
+                                    <h3>Đơn hàng</h3>
+                                </div>
+                                <table class="table table- bg-light">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Tên Khách Hàng</th>
+                                            <th>Địa Chỉ Khách Hàng</th>
+                                            <th>Email</th>
+                                            <th>Số Điện Thoại</th>
+                                            <th>Ngày Tạo</th>
+                                            <th>Trạng Thái</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="dathang">
+                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                       <!--//app-card-->
+                    </div>
+                </div>
+                </div>
+                <hr />
+
+                <!-- /. ROW  -->
+            </div>
+
+
+                    <!-- /. WRAPPER  -->
+                    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+                    <!-- JQUERY SCRIPTS -->
+                 <script src="order-detail.js"></script>
+                    <script src="order.js"></script>
+                    <script src="assets/js/jquery-1.10.2.js"></script>
+                    <!-- BOOTSTRAP SCRIPTS -->
+                    <script src="assets/js/bootstrap.min.js"></script>
+                    <!-- METISMENU SCRIPTS -->
+                    <script src="assets/js/jquery.metisMenu.js"></script>
+                    <!-- CUSTOM SCRIPTS -->
+                    <script src="assets/js/custom.js"></script>
+
+                </body>
+            </html>

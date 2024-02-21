@@ -1,0 +1,117 @@
+{
+  "categories": [
+    {
+      "name": "đồng hồ châu á ",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "đồng hồ châu âu"
+    },
+    {
+      "name": "đồng hồ hoa kì",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "id": 2,
+      "name": "đồng hồ xấu ",
+      "cate_id": 1,
+      "price": 12000000,
+      "detail": "đồng hồ xuất bản từ nhật bản ",
+      "image": "w1.png",
+      "star": 1,
+      "sale": 500000
+    },
+    {
+      "id": 3,
+      "name": "đồng hồ xấu ",
+      "cate_id": 1,
+      "price": 12000000,
+      "detail": "đồng hồ xuất bản từ nhật bản ",
+      "image": "w3.png",
+      "star": 1,
+      "sale": 500000
+    },
+    {
+      "id": 4,
+      "name": "đồng hồ xấu ",
+      "cate_id": 2,
+      "price": 12000000,
+      "detail": "đồng hồ xuất bản từ nhật bản ",
+      "image": "w3.png",
+      "star": 1,
+      "sale": 500000
+    },
+    {
+      "id": 5,
+      "name": "đồng hồ xấu ",
+      "cate_id": 2,
+      "price": 12000000,
+      "detail": "đồng hồ xuất bản từ nhật bản ",
+      "image": "w3.png",
+      "star": 1,
+      "sale": 500000
+    },
+    {
+      "id": 6,
+      "name": "đồng hồ xấu ",
+      "cate_id": 2,
+      "price": 12000000,
+      "detail": "đồng hồ xuất bản từ nhật bản ",
+      "image": "w3.png",
+      "star": 1,
+      "sale": 500000
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "customer_name": "phúc huu",
+      "customer_address": "chộ mới , an giang",
+      "customer_email": "phuchuu@gmail.com",
+      "customer_phone_number": "09876543",
+      "created_date": "some comment",
+      "status": "dở tệ"
+    },
+    {
+      "id": "2",
+      "customer_name": "đình trần",
+      "customer_address": "cầu ngang trà vinh",
+      "customer_email": "đin@gmai.com",
+      "customer_phone_number": "09876543",
+      "created_date": "some comment",
+      "status": "dở"
+    },
+    {
+      "id": "3",
+      "customer_name": "tuấn khỉ",
+      "customer_address": "đồng nai",
+      "customer_email": "tuanmonkey@gmail.com",
+      "customer_phone_number": "123456745",
+      "created_date": "some comment",
+      "status": "ak47"
+    }
+  ],
+  "order_details": [
+    {
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 1,
+      "unit_price": "acb"
+    },
+    {
+      "order_id": 2,
+      "product_id": 2,
+      "quantity": 3,
+      "unit_price": "acb"
+    },
+    {
+      "order_id": 3,
+      "product_id": 3,
+      "quantity": 3,
+      "unit_price": "acb"
+    }
+  ]
+}

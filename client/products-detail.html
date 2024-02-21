@@ -1,0 +1,411 @@
+<style>
+    img {
+    max-width: 100%;
+}
+
+.preview {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 996px) {
+    .preview {
+        margin-bottom: 20px;
+    }
+}
+
+.preview-pic {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-height: 300px;
+}
+
+.preview-thumbnail.nav-tabs {
+    border: none;
+    margin-top: 15px;
+}
+
+.preview-thumbnail.nav-tabs li {
+    width: 18%;
+    margin-right: 2.5%;
+}
+
+.preview-thumbnail.nav-tabs li img {
+    max-width: 100%;
+    display: block;
+}
+
+.preview-thumbnail.nav-tabs li a {
+    padding: 0;
+    margin: 0;
+}
+
+.preview-thumbnail.nav-tabs li:last-of-type {
+    margin-right: 0;
+}
+
+.tab-content {
+    overflow: hidden;
+}
+
+.tab-content img {
+    width: 100%;
+    -webkit-animation-name: opacity;
+    animation-name: opacity;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+}
+
+.card {
+    background: #eee;
+    padding: 3em;
+    line-height: 1.5em;
+}
+
+@media screen and (min-width: 997px) {
+    .wrapper {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+.details {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.colors {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.product-title,
+.price,
+.sizes,
+.colors {
+    text-transform: UPPERCASE;
+    font-weight: bold;
+}
+
+.checked,
+.price span {
+    color: #ff9f1a;
+}
+
+.product-title,
+.rating,
+.product-description,
+.price,
+.vote,
+.sizes {
+    margin-bottom: 15px;
+}
+
+.product-title {
+    margin-top: 0;
+}
+
+.size {
+    margin-right: 10px;
+}
+
+.size:first-of-type {
+    margin-left: 40px;
+}
+
+.color {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    height: 2em;
+    width: 2em;
+    border-radius: 2px;
+}
+
+.color:first-of-type {
+    margin-left: 20px;
+}
+
+.add-to-cart,
+.like {
+    background: #ff9f1a;
+    padding: 1.2em 1.5em;
+    border: none;
+    text-transform: UPPERCASE;
+    font-weight: bold;
+    color: #fff;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+}
+
+.add-to-cart:hover,
+.like:hover {
+    background: #b36800;
+    color: #fff;
+}
+
+.not-available {
+    text-align: center;
+    line-height: 2em;
+}
+
+.not-available:before {
+    font-family: fontawesome;
+    content: "\f00d";
+    color: #fff;
+}
+
+.orange {
+    background: #ff9f1a;
+}
+
+.green {
+    background: #85ad00;
+}
+
+.blue {
+    background: #0076ad;
+}
+
+.tooltip-inner {
+    padding: 1.3em;
+}
+
+@-webkit-keyframes opacity {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+      
+        <title>FATXIT</title>
+      
+      
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+      
+        <!-- font awesome style -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
+      
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="css/responsive.css" rel="stylesheet" />
+      
+      </head>
+      
+      <body>
+        <div class="hero_area">
+            <!-- header section strats -->
+            <header class="header_section">
+              <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                  <a class="navbar-brand" href="index.html">
+                    <span>
+                      FATXIT
+                    </span>
+                  </a>
+        
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""> </span>
+                  </button>
+        
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav  ">
+                      <li class="nav-item ">
+                        <a class="nav-link" href="index.html">TRANG CHỦ <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="about.html"> XEM THÊM</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">SẢN PHẨM KHÁC</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CHÚNG TÔI</a>
+                      </li>
+                    </ul>
+                    <div class="user_optio_box">
+                      <a href="">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </header>
+            <!-- end header section -->
+          </div>
+          <!-- end header section -->
+          
+       
+   
+        <!-- end header -->
+    
+        <main role="main">
+            <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+            <div class="container mt-4">
+                <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+    
+                <div class="card" >
+                    <div class="container-fliud" id="produc_details">
+                     
+                        <form name="frmsanphamchitiet" id="frmsanphamchitiet" method="post"
+                        action="/php/twig/frontend/giohang/themvaogiohang">
+                        <input type="hidden" name="sp_ma" id="sp_ma" value="5">
+                        <input type="hidden" name="sp_ten" id="sp_ten" value="Samsung Galaxy Tab 10.1 3G 16G">
+                        <input type="hidden" name="sp_gia" id="sp_gia" value="10990000.00">
+                        <input type="hidden" name="hinhdaidien" id="hinhdaidien" value="samsung-galaxy-tab-10.jpg">
+                    
+                        <div class="wrapper row">
+                            <div class="preview col-md-6">
+                            <div class="img-box mx-auto" style="width: 200px">
+                            <img src="../client/images/w3.png" alt="">
+                          </div>
+                            </div>
+                            <div class="details col-md-6">
+                                <h3 class="product-title">ĐỒNG HỒ VIỆT NAM</h3>
+                                <div class="rating">
+                                <i class="fa fa-star star_container"" aria-hidden="true"></i>
+                                    <span class="review-no">5</span>
+                                </div>
+                                <p class="product-description">CHẤT LƯỢNG VIỆT</p>
+                                <small class="text-muted">Giá cũ: <s><span>200000</span></s> vnđ</small>
+                                <h4 class="price">Giá hiện tại: <span>150000</span></h4>
+                                <p class="vote"><strong>100%</strong> hàng <strong>Chất lượng</strong>, đảm bảo
+                                    <strong>Uy
+                                        tín</strong>!</p>
+                                <h5 class="sizes">sizes:
+                                    <span class="size" data-toggle="tooltip" title="cỡ Nhỏ">s</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Trung bình">m</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Lớn">l</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Đại">xl</span>
+                                </h5>
+                                <h5 class="colors">colors:
+                                    <span class="color orange not-available" data-toggle="tooltip"
+                                        title="Hết hàng"></span>
+                                    <span class="color green"></span>
+                                    <span class="color blue"></span>
+                                </h5>
+                                <div class="form-group">
+                                    <label for="soluong">Số lượng đặt mua:</label>
+                                    <input type="number" class="form-control" id="soluong" name="soluong">
+                                </div>
+                                <div class="action">
+                                    <a class="add-to-cart btn btn-default" id="btnThemVaoGioHang" href="./giohang.html">Thêm vào giỏ hàng</a>
+                                    <a class="like btn btn-default" href="#"><span class="fa fa-heart"></span></a>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </form> 
+
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="container-fluid">
+                        <h3>Thông tin chi tiết về Sản phẩm</h3>
+                        <div class="row">
+                            <div class="col">
+                                hàng VIỆT NAM chất lượng cao
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End block content -->
+        </main>
+    
+        <!-- footer -->
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                 <span class="text-muted">Hành trang tới Tương lai</span>
+    
+                <p class="float-right">
+                    <a href="./index.html">Về trang chủ</a>
+                </p>
+            </div>
+        </footer>
+        <!-- end footer -->
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="categories.js"></script>
+        <script src="./product_detail.js"></script>
+        <script src="../vendor/jquery/jquery.min.js"></script>
+        <script src="../vendor/popperjs/popper.min.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    
+        <!-- Custom script - Các file js do mình tự viết -->
+        <script src="../assets/js/app.js"></script>
+
+    
+</body>
+</html>
